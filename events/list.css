@@ -1,6 +1,7 @@
 /*並べ方は、ここを参照*/
 /*https://qiita.com/katsunory/items/99a417f4e1a763477a09*/
 body{
+  font-family: 'Noto Serif JP', serif;
   background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   min-width:auto;
   /*背景色が途切れない対策*/

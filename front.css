@@ -1,3 +1,8 @@
+/*フォントの指定*/
+body{
+  font-family: 'Noto Serif JP', serif;
+}
+
 /*コピーライトの装飾*/
 .copyright{
   overflow: hidden;
