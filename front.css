@@ -1,7 +1,7 @@
 /*画面サイズに応じて、メニューの種類を切り替える*/
 
 /* 画面サイズの横幅が 768px より小さい場合に適用 */
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 800px) {
   /*メニューの装飾*/
   * {
   -webkit-box-sizing: border-box;
@@ -195,7 +195,7 @@
 }
 
 /* 画面サイズの横幅が 480px より大きい場合に適用 */
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 800px) {
   .toggle {
           display: none;
       }
@@ -204,43 +204,41 @@
       }
 
   .menu{
-    background-color: #000;
+    background: #000;
+    font-style: oblique;
   }
-      ul {
-      	list-style-type: none;
-      	margin: 0;
-      	padding: 0;
-      	overflow: hidden;
-      	background-color: #000;
-        margin-top: 0px;
-        font-size: 18px;
-        margin-left: auto;
-        margin-right: auto;
-        /*ここがメニューの幅、必要に応じて調整が必要！*/
-        width:560;
-      }
-      li {
-      	float: left;
-      	/*border-right: 1px solid #bbbbbb;*/
-      }
-      li:last-child {
-      	border-right: none;
-      }
-      li a {
-      	display: block;
-      	color: white;
-      	text-align: center;
-      	padding: 14px 16px;
-      	text-decoration: none;
-      }
-      li a:hover:not(.active) {
-      	background-color: #ff6a6a;
-        color:#000;
-      }
-      .active {
-      	background-color: #ff6a6a;
-        color:#000;
-      }
+
+  .menu ul {
+	font-size: 0;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 4px;
+	list-style: none;
+	text-align: center;
+}
+.menu li {
+	font-size: 20px;
+	margin: 3 25px;
+	display: inline-block;
+}
+.menu li a {
+	text-decoration: none;
+	padding-bottom: 3px; /* 文字と下線に隙間を作る */
+	color: #fff;
+	display: block;
+}
+.menu li a:after {
+	content: '';
+	width: 0;
+	transition: all 0.2s ease;
+	border-bottom: 2px solid #ff6a6a;
+	display: block;
+}
+.menu li a:hover:after {
+	width: 100%;
+	border-bottom: 2px solid #ff6a6a;
+}
+
 }
 
 
@@ -252,6 +250,7 @@ header{
   font-family: 'Noto Serif JP', serif;
 }
 body{
+  margin:0px;
   font-family: 'Noto Serif JP', serif;
 }
 
@@ -259,7 +258,6 @@ body{
 .copyright{
   overflow: hidden;
   text-align: center;
-  background-color:#95a5a6;
   display: table-cell;
   height: 20px;
   width: 1250px;
@@ -364,9 +362,8 @@ body{
 
 .article_box{
   text-align: center;
+  width: 100%;
   padding-top: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
   height:auto;/*自動で伸びる*/
 }
 
@@ -421,22 +418,18 @@ body{
 }
 .split-item{
     display: table-cell;
-    padding-right:10px;
-    padding-left: 10px;
     padding-bottom: 10px;
-    padding-top: 25px;
-    width: 60%;
+    padding-top: 2px;
     height:auto;
 }
 
 .split-left{
     text-align: center;
-    opacity: 1;
     color: #000;
     position: relative;
     /*スマホ画面の場合の縦の長さはこれで調整される*/
     height:auto;
-    width: 35%;
+    width: 30%;
 }
 
 .split-left__inner{
@@ -445,7 +438,11 @@ body{
     width: 30%;
     padding-right:0px;
 }
+
 .split-right__inner{
+  width: auto;
+  padding-left:5%;
+  padding-right: 5%;
   /*この数値によって、右の下余白が調整出来る*/
     height: auto;/*自動で伸びる*/
 }
