@@ -1,51 +1,148 @@
 /* 画面サイズの横幅が 768px より小さい場合に適用 */
 @media screen and (max-width: 740px) {
-  .cp_card04 {
-    float: left;
-    width: 44%;
-    height: auto;
-    margin: 2%;
-    font-size: 10px;
-    border-radius: 3px;
-    position: relative;
-    background-color: #fff;
-    -webkit-box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
-    /*transition: all 0.25s ease-in;*/
-    border-bottom: 5px solid transparent;
-  }
-  .list{
-    text-align: center;
-    height:auto;
-    margin-left: 5%;
-  }
+  .split-box {
+		position:relative;
+		width:100%;
+		height:auto;
+	}
 }
 
 /* 画面サイズの横幅が 480px より大きい場合に適用 */
 @media screen and (min-width: 740px) {
-  .cp_card04 {
-    float: left;
-    width: 20%;
-    height: auto;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    font-size: 10px;
-    border-radius: 3px;
-
-    position: relative;
-    background-color: #fff;
-    -webkit-box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
-    /*transition: all 0.25s ease-in;*/
-    border-bottom: 5px solid transparent;
+  .split-box{
+  	position:absolute;
+  	width:50%;
+  	height:100%;
   }
-  .list{
-    text-align: center;
-    height:auto;
-    padding-left: 5%;
-  }
-
 }
+
+/*画面を左右に分解する為のもの*/
+/*https://webdesign-trends.net/entry/2325*/
+
+
+.left-box {
+	left:0;
+}
+
+.right-box {
+	right:0;
+	overflow-y:scroll;
+}
+/*ここまで*/
+
+
+/*googleカレンダーの装飾*/
+.cal_wrapper {
+  margin-top: 5px;
+  padding-left:2%;
+  padding-right:2%;
+  width: auto;
+}
+
+.googlecal {
+position: relative;
+padding-bottom: 100%;
+height: 0;
+}
+
+.googlecal iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100% !important;
+height: 100% !important;
+}
+
+  /*カードの装飾*/
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #eee;
+    line-height: 1.5;
+  }
+
+  /*img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }*/
+
+  .l-wrapper {
+    width: auto;
+    height: auto;
+    position: relative;
+    margin-top: 5px;
+    margin-left:2%;
+    margin-right:2%;
+    margin-bottom: 1%;
+  }
+
+  .card {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+    color: #212121;
+    text-decoration: none;
+  }
+
+  .card__header {
+  }
+
+  .card__title {
+    padding: 1rem 1rem 0;
+    font-size: 1.25rem;
+  }
+
+  /*.card__thumbnail {
+    margin: 0;
+    order: 0;
+  }*/
+
+  /*.card__image {
+    width: 100%;
+  }*/
+
+  .card__body {
+    padding: 1rem;
+  }
+
+  .card__text {
+    font-size: .75rem;
+  }
+
+  .card__text + .card__text {
+    margin-top: .5rem;
+  }
+
+  .card__text.-number {
+    text-align: right;
+  }
+
+  .card__footer {
+    text-align: center;
+    padding: 5px;
+    border-top: 1px solid #ddd;
+  }
+
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+  }
+
+  .button.-compact {
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    background-color: #26a69a;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .button.-compact:hover,
+  .button.-compact:focus {
+    background-color: #80cbc4;
+  }
 
 
 
@@ -62,8 +159,14 @@ body{
 }
 
 .top{
+  margin-top: 60px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 
@@ -71,73 +174,7 @@ body{
 
 
 
-img{
-  height:100px;
-  width: auto;
-}
 
-.cp_card04 .photo {
-  overflow: hidden;
-}
-
-.cp_card04 .details {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-padding: 1em 1em 0 1em;
-font-size: 12px;
-}
-.cp_card04 .date {
-  font-size: 10px;
--webkit-box-flex: 1;
--ms-flex: 1;
-flex: 1;
-padding:3px;
-text-align: right;
-}
-.cp_card04 .category {
-  font-size: 15px;
--webkit-box-flex: 2;
--ms-flex: 2;
-flex: 2;
-}
-.cp_card04 .category p {
-font-size: 0.8em;
-padding: 3px 8px;
-cursor: pointer;
-width: 70px;
-margin: 0;
-border-radius: 10px;
-background: #ff6a6a;
-text-align: center;
-color: #ffffff;
-}
-.cp_card04 .description {
-padding: 0 1em;
-}
-.cp_card04 .description h1 {
-font-size: 1.4em;
-margin: 0;
-margin-bottom: 0.5em;
-}
-.cp_card04 .description .text p {
-margin: 0;
-}
-.cp_card04 .description a {
-text-align:center;
-margin-bottom: 10px;
-text-decoration: none;
-color: #ff6a6a;
-}
-.cp_card04 .description a:after {
-font-family: FontAwesome;
-margin-left: -10px;
-content: '\f061';
--webkit-transition: all 0.3s ease;
-transition: all 0.3s ease;
-vertical-align: middle;
-opacity: 0;
-}
 
 
 /*メニューの装飾*/
