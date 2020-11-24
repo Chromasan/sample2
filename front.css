@@ -1,7 +1,7 @@
 /*画面サイズに応じて、メニューの種類を切り替える*/
 
 /* 画面サイズの横幅が 768px より小さい場合に適用 */
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {*/
   /*メニューの装飾*/
   * {
   -webkit-box-sizing: border-box;
@@ -48,7 +48,7 @@
   text-align: center;
   color: #fefefe;
   border-radius: 50%;
-  background: #ff6a6a;
+  background: #000;
   flex: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -161,7 +161,7 @@
   cursor: pointer;
   transition: box-shadow 0.2s ease;
   border-radius: 0 0.12em 0.12em 0;
-  background: #ff6a6a;
+  background: #000;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   }
@@ -195,7 +195,7 @@
 }
 
 /* 画面サイズの横幅が 480px より大きい場合に適用 */
-@media screen and (min-width: 800px) {
+/*@media screen and (min-width: 800px) {
   .toggle {
           display: none;
       }
@@ -223,7 +223,7 @@
 }
 .menu li a {
 	text-decoration: none;
-	padding-bottom: 3px; /* 文字と下線に隙間を作る */
+	padding-bottom: 3px;
 	color: #fff;
 	display: block;
 }
@@ -231,15 +231,15 @@
 	content: '';
 	width: 0;
 	transition: all 0.2s ease;
-	border-bottom: 2px solid #ff6a6a;
+	border-bottom: 2px solid #000;
 	display: block;
 }
 .menu li a:hover:after {
 	width: 100%;
-	border-bottom: 2px solid #ff6a6a;
+	border-bottom: 2px solid #000;
 }
 
-}
+}*/
 
 
 
@@ -283,6 +283,7 @@ span{
 .title h1{
   text-align: center;
   font-size: 35px;
+  margin-top:18px;
 }
 
 /*左の小見出し*/
@@ -380,6 +381,7 @@ body{
   width: 100%;
   color:#ffffff;
   background-color: #000000;
+  margin-top:0px;
 }
 .content01::after {
   content: '';
@@ -419,7 +421,7 @@ body{
 .split-item{
     display: table-cell;
     padding-bottom: 10px;
-    padding-top: 2px;
+    padding-top: 0px;
     height:auto;
 }
 

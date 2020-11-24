@@ -39,7 +39,6 @@
 
 
 body{
-
   font-family: 'Noto Serif JP', serif;
   /*background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);*/
   background:#dfe6e9;
@@ -125,8 +124,6 @@ img{
     color:#444; /* 目次リスト部分のテキスト色 */
     text-decoration:none; /* リンクの下線をつけたくない場合 */
 }
-
-
 
 
 /*メニューの装飾*/

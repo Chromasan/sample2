@@ -54,12 +54,12 @@ height: 100% !important;
 }
 
   /*カードの装飾*/
-  * {
+  .l-wrapper * {
     margin: 0;
     padding: 0;
   }
 
-  body {
+  .l-wrapper body {
     background-color: #eee;
     line-height: 1.5;
   }
@@ -134,14 +134,14 @@ height: 100% !important;
   .button.-compact {
     padding: .5rem 1rem;
     border-radius: .25rem;
-    background-color: #26a69a;
+    background-color: #ff6a6a;
     color: #fff;
     font-weight: bold;
   }
 
   .button.-compact:hover,
   .button.-compact:focus {
-    background-color: #80cbc4;
+    background-color: #ff6a6a;
   }
 
 
@@ -156,26 +156,28 @@ body{
   /*背景色が途切れない対策*/
   min-height: 1200px;
   height:auto;
+  margin: 0px;
 }
 
 .top{
-  margin-top: 60px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-color: #fff;
   width: 100%;
-  height: 100%;
   text-align: center;
   font-size: 20px;
+  height: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
+h1{
+  margin:0px;
+  padding: 0px;
+}
+
+span{
+  color:#ff6a6a;
+}
 
 /*https://877.design/flexbox-layout/*/
-
-
-
-
-
 
 /*メニューの装飾*/
 * {
@@ -223,7 +225,7 @@ transform: scale(0);
 text-align: center;
 color: #fefefe;
 border-radius: 50%;
-background: #ff6a6a;
+background: #000;
 flex: none;
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
@@ -336,7 +338,7 @@ padding: 0.5em 1em;
 cursor: pointer;
 transition: box-shadow 0.2s ease;
 border-radius: 0 0.12em 0.12em 0;
-background: #ff6a6a;
+background: #000;
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
 }
